@@ -1,24 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {FC} from 'react';
 
-function App() {
+import './App.css';
+import { Enum, EyeColor } from './components/Enum';
+import { Person } from './components/Person';
+import { State } from './components/State';
+
+const App: FC = () => {
+ 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Person name='Nalwanga' age={23} email='nalwanga@gmail.com'/>
+      <State />
+      <Enum name='Isiagi' age={25} email='geofrey' hairColor={EyeColor.red}/>
     </div>
   );
 }
